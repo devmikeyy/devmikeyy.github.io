@@ -6,6 +6,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
   color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -51,15 +52,43 @@ nav ul li a:hover {
   padding: 150px 0;
   background: linear-gradient(to bottom, rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('hero-bg.jpg') center/cover no-repeat;
   color: #fff;
+  height: calc(100vh - 80px); /* Adjust based on header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h2 {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  animation: slideInDown 1s ease;
 }
 
 .hero p {
   font-size: 1.5rem;
+  animation: slideInUp 1s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .container {
@@ -88,6 +117,11 @@ section p {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
 }
 
 .project-card img {
