@@ -5,7 +5,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #121212;
+  background: linear-gradient(90deg, #4CAF50, #0097A7);
   color: #fff;
 }
 
@@ -38,7 +38,7 @@ section p {
   margin: 10px;
   width: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #444;
   animation: fade-in 1s ease-in-out;
 }
@@ -48,7 +48,7 @@ section h2 {
   margin: 10px;
   width: 100%;
   text-align: center;
-  font-size: 36px;
+  font-size: 48px;
   color: #fff;
   animation: fade-in 1s ease-in-out;
 }
@@ -82,6 +82,7 @@ section h2 {
   width: 100%;
   object-fit: cover;
   height: 200px;
+  border-radius: 10px;
 }
 
 .projects-item h3 {
@@ -93,7 +94,7 @@ section h2 {
 }
 
 .projects-link {
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   padding: 10px;
   color: #fff;
@@ -107,7 +108,7 @@ section h2 {
   color: #ccc;
 }
 
-/* Add a nice color theme with a cool color (teal) and other colors */
+/* Add a nice color theme with a vibrant color (teal) and other colors */
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -115,22 +116,171 @@ body {
   color: #444;
 }
 
+/* Style the GitHub repository link */
+pre {
+  border-radius: 10px;
+  background: #fff;
+  color: #444;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+pre:hover {
+  transform: translateY(-5px);
+}
+
 /* Animations */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-a:link {
-  color: #121212;
-  text-decoration: none;
+.fade-in-container {
+  opacity: 0;
+  animation: fade-in 2s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-a:visited {
-  color: #787878;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-a:hover {
-  color: #005b9a;
+.fade-in-item {
+  animation: fade-in-item 1s linear;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-a:active {
-  color: #ff0000;
+@keyframes fade-in-item {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
+
+.zoom-in-container {
+  opacity: 0;
+  animation: zoom-in 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in-item {
+  animation: zoom-in-item 1.5s linear;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom-in-item {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.move-left-container {
+  opacity: 0;
+  animation: move-left 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.move-left-item {
+  animation: move-left-item 1.5s linear;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-left-item {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.move-right-container {
+  opacity: 0;
+  animation: move-right 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.move-right-item {
+  animation: move-right-item 1.5s linear;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-right-item {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.move-down-container {
+  opacity: 0;
+  animation: move-down 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform
