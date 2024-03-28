@@ -5,17 +5,17 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(180deg, #4CAF50, #0097A7);
+  background: linear-gradient(180deg, #141414, #0f0c29);
   color: #fff;
 }
 
 header h1 {
   font-size: 48px;
-  animation: rotate-in 2s ease-in-out;
+  animation: rotate-in-dark 2s ease-in-out;
   animation-fill-mode: forwards;
 }
 
-@keyframes rotate-in {
+@keyframes rotate-in-dark {
   0% {
     transform: rotate(0deg);
     opacity: 0;
@@ -34,10 +34,10 @@ section {
   justify-content: center;
   padding: 50px;
   margin: 50px 0;
-  background-color: #fff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #1a1a1a;
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  animation: slide-in 1.5s ease-in-out;
+  animation: slide-in-dark 1.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -45,7 +45,7 @@ section p {
   margin: 10px;
   font-size: 20px;
   line-height: 1.5;
-  animation: fade-in 1.5s ease-in-out;
+  animation: fade-in-dark 1.5s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -55,7 +55,7 @@ section h2 {
   font-size: 36px;
   font-weight: bold;
   color: #4CAF50;
-  animation: zoom-in 1.5s ease-in-out;
+  animation: zoom-in-dark 1.5s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -73,7 +73,7 @@ section .projects-item {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s;
-  animation: move-left-to-right 1.5s ease-in-out;
+  animation: move-left-to-right-dark 1.5s ease-in-out;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
@@ -85,7 +85,7 @@ section .projects-item:hover {
 
 section .projects-item:focus {
   transform: scale(1.05);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.15);
 }
 
 section .projects-item img {
@@ -103,7 +103,7 @@ section .projects-item h3 {
   background-color: #4CAF50;
   border-radius: 0px 0px 10px 10px;
   margin: 0;
-  animation: fade-in-item 1s linear;
+  animation: fade-in-item-dark 1s linear;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
@@ -114,151 +114,4 @@ section .projects-link {
   padding: 10px;
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
-  transition: border-color 0.3s;
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-* {
-  font-family: 'Lato', sans-serif;
-  overflow-x: hidden;
-}
-
-/* Animations */
-
-.rotate-in {
-  animation: rotate-in 2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes rotate-in {
-  0% {
-    transform: rotate(5deg);
-    opacity: 0;
-  }
-  80% {
-    transform: rotate(-2deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.slide-in {
-  animation: slide-in 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.move-left-to-right {
-  animation: move-left-to-right 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes move-left-to-right {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.fade-in-item {
-  animation: fade-in-item 1s linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-in-item {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.zoom-in {
-  animation: zoom-in 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes zoom-in {
-  0% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Other styles */
-
-a {
-  color: #121212;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #444;
-}
-
-a:hover {
-  color: #005b9a;
-}
-
-a:active {
-  color: #ff0000;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: linear-gradient(180deg, #4CAF50, #0097A7);
-  color: #fff;
-}
-
-header h1 {
-  font-size: 48px;
-  animation: rotate-in 2s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  margin: 50px 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
- 
-  /* Add a smooth transition when fading in the section */
-  opacity: 0;
-  animation: slide-in 1.5s ease-in-out;
-  animation-fill-mode: forwards;
+  border-bottom
